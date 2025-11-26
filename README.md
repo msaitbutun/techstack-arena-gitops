@@ -5,6 +5,8 @@
 ![ArgoCD](https://img.shields.io/badge/GitOps-ArgoCD-orange?style=for-the-badge&logo=argo)
 ![Istio](https://img.shields.io/badge/Service_Mesh-Istio-blueviolet?style=for-the-badge&logo=istio)
 ![GCP](https://img.shields.io/badge/Google_Cloud-Platform-green?style=for-the-badge&logo=google-cloud)
+<img width="2833" height="1646" alt="image" src="https://github.com/user-attachments/assets/ecbb7334-7d31-47a7-9dc5-b59adbecf3b1" />
+
 
 ## 📖 Proje Özeti
 
@@ -56,3 +58,4 @@ cd infrastructure
 terraform init
 terraform plan
 terraform apply -auto-approve
+
