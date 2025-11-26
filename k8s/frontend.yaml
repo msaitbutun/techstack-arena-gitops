@@ -26,8 +26,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        # DİKKAT: Burası v1 (Mavi) olsun ki demoda v2'ye (Yeşil) geçişi gösterelim.
-        image: saitbutun/tech-arena-frontend:v2 
+        image: saitbutun/tech-arena-frontend:v1 # mavi, default version
         imagePullPolicy: Always
         resources:
           requests:
@@ -35,3 +34,28 @@ spec:
             cpu: "100m"
         ports:
         - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: saitbutun/tech-arena-frontend:v2 #yesil versiyon
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 80        

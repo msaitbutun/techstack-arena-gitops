@@ -14,7 +14,7 @@ kind: Deployment
 metadata:
   name: api
 spec:
-  replicas: 2 # Yüksek Erişilebilirlik (2 tane çalışacak)
+  replicas: 1 
   selector:
     matchLabels:
       app: api
@@ -25,14 +25,15 @@ spec:
     spec:
       containers:
       - name: api
-        image: saitbutun/tech-arena-backend:v1 # Veya :v1 (etiketine dikkat et)
+        image: saitbutun/tech-arena-backend:v1 
         imagePullPolicy: Always
         env:
         - name: REDIS_HOST
-          value: "redis-service" # Redis Service ismiyle eşleşmeli
+          value: "redis-service" 
         resources:
           requests:
             memory: "64Mi"
             cpu: "100m"
         ports:
         - containerPort: 8000
+        
