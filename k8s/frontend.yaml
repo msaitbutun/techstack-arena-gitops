@@ -27,7 +27,7 @@ spec:
       containers:
       - name: frontend
         # DİKKAT: Burası v1 (Mavi) olsun ki demoda v2'ye (Yeşil) geçişi gösterelim.
-        image: saitbutun/tech-arena-frontend:v1 
+        image: saitbutun/tech-arena-frontend:v2 
         imagePullPolicy: Always
         resources:
           requests:
