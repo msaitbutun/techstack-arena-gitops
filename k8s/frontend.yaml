@@ -13,16 +13,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontend-v1
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: frontend
+      version: v1
   template:
     metadata:
       labels:
         app: frontend
+        version: v1
     spec:
       containers:
       - name: frontend
@@ -38,16 +40,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontend-v2
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: frontend
-  template:
+      version: v2
+  template: 
     metadata:
       labels:
         app: frontend
+        version: v2
     spec:
       containers:
       - name: frontend
