@@ -54,7 +54,7 @@ Repoyu klonlayın ve Terraform ile GKE cluster'ını ayağa kaldırın.
 
 ```bash
 git clone https://github.com/msaitbutun/techstack-arena-gitops.git
-cd infrastructure
+cd terraform
 terraform init
 terraform plan
 terraform apply -auto-approve
